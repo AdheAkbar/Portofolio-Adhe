@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Volume2, VolumeX, Sparkles, ArrowUpRight, FileText } from 'lucide-react';
 import { toggleMute, playTactileClick } from '../utils/soundEffects';
 
@@ -10,6 +10,40 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
   const [muted, setMuted] = useState(false);
+  const [activeId, setActiveId] = useState('hero');
+
+  const NAV_ITEMS = [
+    { id: 'hero', label: 'Beranda', href: '#hero' },
+    { id: 'hybrid-skillset', label: 'Keahlian', href: '#hybrid-skillset' },
+    { id: 'cv-lengkap', label: 'CV Lengkap', href: '#cv-lengkap' },
+    { id: 'github-showcase', label: 'Proyek', href: '#github-showcase' },
+    { id: 'sinta-3-research', label: 'Riset SINTA', href: '#sinta-3-research' },
+    { id: 'kreatif-juara', label: 'Prestasi', href: '#kreatif-juara' },
+    { id: 'sertifikat', label: 'Sertifikasi', href: '#sertifikat' },
+    { id: 'kontak', label: 'Kontak', href: '#kontak' },
+  ];
+
+  const handleNavClick = (id: string) => {
+    playTactileClick(1100);
+    setActiveId(id);
+  };
+
+  // Active mengikuti posisi scroll (nearest section top di bawah navbar)
+  useEffect(() => {
+    const computeActive = () => {
+      const offset = 140;
+      let current = 'hero';
+      for (const item of NAV_ITEMS) {
+        const el = document.getElementById(item.id);
+        if (el && el.getBoundingClientRect().top <= offset + 10) current = item.id;
+      }
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) current = 'kontak';
+      setActiveId(current);
+    };
+    computeActive();
+    window.addEventListener('scroll', computeActive, { passive: true });
+    return () => window.removeEventListener('scroll', computeActive);
+  }, []);
 
   const handleMuteToggle = () => {
     const isNowMuted = toggleMute();
@@ -50,65 +84,31 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
           </div>
         </div>
 
-        {/* Quick Nav Links (Clean Modern Editorial, No Slide Numbers) */}
+        {/* Quick Nav Links — active state mengikuti scroll & klik */}
         <nav className="hidden lg:flex items-center gap-1 bg-neutral-100/90 p-1 rounded-full border border-neutral-200/80 text-xs font-sans">
-          <a
-            href="#hero"
-            onClick={() => playTactileClick(1000)}
-            className="px-3 py-1.5 rounded-full text-neutral-600 hover:text-neutral-900 hover:bg-white transition-all font-medium"
-          >
-            Beranda
-          </a>
-          <a
-            href="#hybrid-skillset"
-            onClick={() => playTactileClick(1100)}
-            className="px-3 py-1.5 rounded-full text-neutral-600 hover:text-neutral-900 hover:bg-white transition-all font-medium"
-          >
-            Keahlian
-          </a>
-          <a
-            href="#cv-lengkap"
-            onClick={() => playTactileClick(1150)}
-            className="px-3 py-1.5 rounded-full text-blue-700 bg-blue-50/80 hover:bg-white transition-all font-bold flex items-center gap-1"
-          >
-            <span>CV Lengkap</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-          </a>
-          <a
-            href="#github-showcase"
-            onClick={() => playTactileClick(1200)}
-            className="px-3 py-1.5 rounded-full text-neutral-600 hover:text-neutral-900 hover:bg-white transition-all font-medium"
-          >
-            Proyek
-          </a>
-          <a
-            href="#sinta-3-research"
-            onClick={() => playTactileClick(1300)}
-            className="px-3 py-1.5 rounded-full text-neutral-600 hover:text-neutral-900 hover:bg-white transition-all font-medium"
-          >
-            Riset SINTA
-          </a>
-          <a
-            href="#kreatif-juara"
-            onClick={() => playTactileClick(1350)}
-            className="px-3 py-1.5 rounded-full text-neutral-600 hover:text-neutral-900 hover:bg-white transition-all font-medium"
-          >
-            Prestasi
-          </a>
-          <a
-            href="#sertifikat"
-            onClick={() => playTactileClick(1400)}
-            className="px-3 py-1.5 rounded-full text-neutral-600 hover:text-neutral-900 hover:bg-white transition-all font-medium"
-          >
-            Sertifikasi
-          </a>
-          <a
-            href="#kontak"
-            onClick={() => playTactileClick(1500)}
-            className="px-3 py-1.5 rounded-full text-neutral-600 hover:text-neutral-900 hover:bg-white transition-all font-medium"
-          >
-            Kontak
-          </a>
+          {NAV_ITEMS.map((item) => {
+            const isActive = activeId === item.id;
+            return (
+              <a
+                key={item.id}
+                href={item.href}
+                onClick={() => handleNavClick(item.id)}
+                aria-current={isActive ? 'page' : undefined}
+                className={`px-3 py-1.5 rounded-full transition-all duration-300 ease-out font-medium flex items-center gap-1 ${
+                  isActive
+                    ? 'text-blue-700 bg-blue-50/80 font-bold shadow-2xs'
+                    : 'text-neutral-600 hover:text-neutral-900 hover:bg-white'
+                }`}
+              >
+                <span>{item.label}</span>
+                <span
+                  className={`rounded-full bg-blue-600 transition-all duration-300 ease-out ${
+                    isActive ? 'w-1.5 h-1.5 opacity-100 scale-100' : 'w-0 h-0 opacity-0 scale-0'
+                  }`}
+                />
+              </a>
+            );
+          })}
         </nav>
 
         {/* Action Controls & Contact Me Pill (Direct Behance Replica) */}

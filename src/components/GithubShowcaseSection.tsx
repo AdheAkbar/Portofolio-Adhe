@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import confetti from 'canvas-confetti';
-import { PORTFOLIO_DATA, GithubProject } from '../data/portfolioData';
+import { PORTFOLIO_DATA, GithubProject, GITHUB_ARCHIVE } from '../data/portfolioData';
 import { useInView } from '../hooks/useInView';
 import { playTactileClick, playCelebrationChime } from '../utils/soundEffects';
 import { 
@@ -10,8 +10,10 @@ import {
   Smartphone, 
   Globe, 
   TrendingUp, 
-  CheckCircle2, 
+  CheckCircle2,
   FolderGit2,
+  ShieldCheck,
+  Gamepad2,
   Star,
   Play,
   Hash
@@ -81,11 +83,12 @@ export const GithubShowcaseSection: React.FC = () => {
 
   const categories = [
     { id: 'ALL', label: 'SEMUA PROYEK (6)', icon: <FolderGit2 className="w-3.5 h-3.5" /> },
-    { id: 'MOBILE_ANDROID', label: 'ANDROID KOTLIN (2)', icon: <Smartphone className="w-3.5 h-3.5 text-emerald-600" /> },
-    { id: 'BROWSER_EXTENSION', label: 'BROWSER TOOLING (1)', icon: <Terminal className="w-3.5 h-3.5 text-amber-600" /> },
+    { id: 'FINANCE_APP', label: 'FINANCE WEB (1)', icon: <TrendingUp className="w-3.5 h-3.5 text-purple-600" /> },
     { id: 'WEB_FULLSTACK', label: 'NEXT.JS FULLSTACK (1)', icon: <Globe className="w-3.5 h-3.5 text-sky-600" /> },
-    { id: 'FINANCIAL_LIB', label: 'QUANT ENGINE (1)', icon: <TrendingUp className="w-3.5 h-3.5 text-purple-600" /> },
-    { id: 'MACHINE_LEARNING', label: 'MACHINE LEARNING (1)', icon: <Code2 className="w-3.5 h-3.5 text-rose-600" /> },
+    { id: 'SECURITY', label: 'SECURITY PORTAL (1)', icon: <ShieldCheck className="w-3.5 h-3.5 text-rose-600" /> },
+    { id: 'MOBILE_ANDROID', label: 'ANDROID KOTLIN (1)', icon: <Smartphone className="w-3.5 h-3.5 text-emerald-600" /> },
+    { id: 'BROWSER_EXTENSION', label: 'BROWSER TOOLING (1)', icon: <Terminal className="w-3.5 h-3.5 text-amber-600" /> },
+    { id: 'GAME', label: 'GAME EDUKASI (1)', icon: <Gamepad2 className="w-3.5 h-3.5 text-indigo-600" /> },
   ];
 
   const filteredProjects = filterCategory === 'ALL'
@@ -97,8 +100,9 @@ export const GithubShowcaseSection: React.FC = () => {
       case 'MOBILE_ANDROID': return <Smartphone className="w-4 h-4 text-emerald-600" />;
       case 'BROWSER_EXTENSION': return <Terminal className="w-4 h-4 text-amber-600" />;
       case 'WEB_FULLSTACK': return <Globe className="w-4 h-4 text-sky-600" />;
-      case 'FINANCIAL_LIB': return <TrendingUp className="w-4 h-4 text-purple-600" />;
-      case 'MACHINE_LEARNING': return <Code2 className="w-4 h-4 text-rose-600" />;
+      case 'FINANCE_APP': return <TrendingUp className="w-4 h-4 text-purple-600" />;
+      case 'SECURITY': return <ShieldCheck className="w-4 h-4 text-rose-600" />;
+      case 'GAME': return <Gamepad2 className="w-4 h-4 text-indigo-600" />;
       default: return <Code2 className="w-4 h-4 text-slate-800" />;
     }
   };
@@ -150,7 +154,7 @@ export const GithubShowcaseSection: React.FC = () => {
             <p className={`font-serif-italic text-lg sm:text-xl text-blue-700 mt-1 mb-2 font-normal transition-all ${
               isInView ? 'animate-reveal-up delay-150' : ''
             }`}>
-              6 Proyek Pilihan dari 18 Repositori Publik di GitHub: Android, Browser, Web, Quant & ML
+              6 Proyek Pilihan dari 26 Repositori Publik di GitHub: Finance, Web, Security, Android & Game
             </p>
 
             <p className={`text-slate-600 text-xs sm:text-sm font-sans leading-relaxed transition-all ${
@@ -387,6 +391,65 @@ export const GithubShowcaseSection: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* ARSIP LENGKAP: Seluruh 26 Repositori Publik */}
+        <div className="mt-10 bg-slate-50/80 rounded-3xl border border-slate-200 p-5 sm:p-7">
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <div className="text-[11px] font-mono font-bold text-slate-500 uppercase tracking-widest mb-1">
+                Arsip Lengkap
+              </div>
+              <h3 className="text-lg sm:text-xl font-heading font-extrabold text-[#0B1E3D]">
+                Semua {GITHUB_ARCHIVE.length} Repositori Publik di GitHub
+              </h3>
+            </div>
+            <a
+              href="https://github.com/AdheAkbar?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => playTactileClick(1200)}
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 text-[11px] font-mono font-bold text-slate-700 hover:border-blue-400 hover:text-blue-700 transition-colors"
+            >
+              <GithubIcon className="w-3.5 h-3.5" />
+              <span>Buka Profil GitHub</span>
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+            {GITHUB_ARCHIVE.map((repo) => (
+              <a
+                key={repo.name}
+                href={repo.url}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => playTactileClick(1150)}
+                className={`group flex items-start gap-3 p-3 rounded-2xl border bg-white transition-all hover:shadow-xs hover:-translate-y-0.5 ${
+                  repo.featured ? 'border-blue-300 hover:border-blue-500' : 'border-slate-200 hover:border-slate-400'
+                }`}
+              >
+                <div className={`shrink-0 mt-0.5 w-1.5 h-1.5 rounded-full ${repo.featured ? 'bg-blue-600' : 'bg-slate-300'}`} />
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                    <span className="text-xs font-heading font-extrabold text-[#0B1E3D] group-hover:text-blue-700 truncate">
+                      {repo.name}
+                    </span>
+                    {repo.featured && (
+                      <span className="px-1.5 py-0.5 rounded-md bg-blue-50 border border-blue-200 text-[9px] font-mono font-bold text-blue-700">
+                        UNGGULAN
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-[11px] text-slate-500 font-sans leading-snug mt-0.5 line-clamp-2">
+                    {repo.description}
+                  </p>
+                  <span className="text-[9.5px] font-mono text-slate-400 mt-1 block">
+                    {repo.language} · diubah {repo.pushed}
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
 
       </div>

@@ -228,7 +228,9 @@ export const BappedaExperienceSection: React.FC = () => {
                 title: 'Kolaborasi Tim Humas BAPPEDA',
                 subtitle: 'Koordinasi Publikasi & Dokumentasi',
                 ratio: 'Aspek 4:3 · Foto Tim',
-                placeholder: 'Slot Foto Bersama Tim Humas'
+                placeholder: 'Slot Foto Bersama Tim Humas',
+                image: '/assets/bappeda_team.jpg',
+                alt: 'Foto bersama tim Humas BAPPEDA Provinsi Lampung'
               }
             ] as { id: string; title: string; subtitle: string; ratio: string; placeholder: string; image?: string; alt?: string }[]).map((slot) => (
               <div
@@ -287,9 +289,6 @@ export const BappedaExperienceSection: React.FC = () => {
                   <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center shadow-2xs">
                     {pil.icon}
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-slate-500">
-                    PILAR {pil.code}
-                  </span>
                 </div>
 
                 <h3 className="text-lg font-heading font-extrabold text-[#0B1E3D] mb-2">

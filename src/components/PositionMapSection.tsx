@@ -194,7 +194,7 @@ export const PositionMapSection: React.FC<PositionMapSectionProps> = ({
   const proofNodes = [
     {
       id: 'proof-github',
-      title: '6 Proyek Inti dari 18 Repositori GitHub',
+      title: '6 Proyek Inti dari 26 Repositori GitHub',
       slideCode: 'BUKTI 01',
       targetAnchor: '#github-showcase',
       icon: <Code2 className="w-4 h-4 text-sky-600" />,

@@ -342,7 +342,7 @@ export const EducationSection: React.FC = () => {
                   Live ML Sentiment Sandbox
                 </div>
                 <p className="text-xs text-slate-500 line-clamp-2 font-sans mt-1">
-                  Uji komparasi langsung model Naive Bayes vs KNN pada 1.500 ulasan Google Play Store.
+                  Uji komparasi langsung model Naive Bayes vs KNN pada 18.869 ulasan Google Play Store.
                 </p>
               </div>
               <div className="mt-4 flex items-center gap-1.5 text-xs font-mono text-[#0B1E3D] font-bold group-hover:text-blue-700">

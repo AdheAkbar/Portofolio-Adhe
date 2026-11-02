@@ -551,7 +551,7 @@ export const CvOverviewSection: React.FC<CvOverviewSectionProps> = ({ onOpenCvMo
                     onClick={() => scrollToSlide('sertifikat')}
                     className="text-xs font-mono font-bold text-slate-700 hover:text-blue-700 pt-3 border-t border-slate-100 flex items-center justify-between cursor-pointer"
                   >
-                    <span>Inspeksi di Vault</span>
+                    <span>Lihat</span>
                     <ChevronRight className="w-3 h-3" />
                   </button>
                 </div>
@@ -570,7 +570,7 @@ export const CvOverviewSection: React.FC<CvOverviewSectionProps> = ({ onOpenCvMo
                     onClick={() => scrollToSlide('sertifikat')}
                     className="text-xs font-mono font-bold text-slate-700 hover:text-blue-700 pt-3 border-t border-slate-100 flex items-center justify-between cursor-pointer"
                   >
-                    <span>Inspeksi di Vault</span>
+                    <span>Lihat</span>
                     <ChevronRight className="w-3 h-3" />
                   </button>
                 </div>
@@ -589,7 +589,7 @@ export const CvOverviewSection: React.FC<CvOverviewSectionProps> = ({ onOpenCvMo
                     onClick={() => scrollToSlide('sertifikat')}
                     className="text-xs font-mono font-bold text-slate-700 hover:text-blue-700 pt-3 border-t border-slate-100 flex items-center justify-between cursor-pointer"
                   >
-                    <span>Inspeksi di Vault</span>
+                    <span>Lihat</span>
                     <ChevronRight className="w-3 h-3" />
                   </button>
                 </div>
@@ -608,7 +608,7 @@ export const CvOverviewSection: React.FC<CvOverviewSectionProps> = ({ onOpenCvMo
                     onClick={() => scrollToSlide('kreatif-juara')}
                     className="text-xs font-mono font-bold text-slate-700 hover:text-purple-700 pt-3 border-t border-slate-100 flex items-center justify-between cursor-pointer"
                   >
-                    <span>Inspeksi di Seksi Prestasi</span>
+                    <span>Lihat Prestasi</span>
                     <ChevronRight className="w-3 h-3" />
                   </button>
                 </div>
@@ -627,7 +627,7 @@ export const CvOverviewSection: React.FC<CvOverviewSectionProps> = ({ onOpenCvMo
                     onClick={() => scrollToSlide('sertifikat')}
                     className="text-xs font-mono font-bold text-slate-700 hover:text-amber-700 pt-3 border-t border-slate-100 flex items-center justify-between cursor-pointer"
                   >
-                    <span>Inspeksi di Vault</span>
+                    <span>Lihat</span>
                     <ChevronRight className="w-3 h-3" />
                   </button>
                 </div>

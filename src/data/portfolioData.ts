@@ -198,94 +198,94 @@ export const PORTFOLIO_DATA = {
 
   githubProjects: [
     {
-      id: "adhebank",
-      name: "Adhebank",
-      title: "Android Banking Simulation System",
-      category: "MOBILE_ANDROID",
-      techStack: ["Kotlin", "Jetpack Compose", "MVVM Clean Architecture", "Room Database", "Material 3"],
-      description: "Aplikasi simulasi transaksi dan manajemen rekening perbankan berbasis Android modern dengan prinsip Unidirectional Data Flow (UDF), proteksi state, dan interaksi UI responsif.",
+      id: "adhemology",
+      name: "adhemology",
+      title: "Adimology — Kalkulator Target Saham",
+      category: "FINANCE_APP",
+      techStack: ["Next.js 16", "TypeScript", "Supabase", "Playwright", "Gemini AI", "jsPDF"],
+      description: "Aplikasi web kalkulator target harga saham: menarik data sesi Stockbit lewat Playwright, menghitung target dan risk/reward, lalu mengekspor laporan PDF. Data disinkronkan ke Supabase dengan bantuan ringkasan Gemini AI.",
       highlights: [
-        "Pemisahan layer Domain, Data, dan UI secara ketat (Clean Architecture)",
-        "Manajemen state asynchronous menggunakan Kotlin Coroutines & StateFlow",
-        "Penyimpanan lokal terenkripsi dengan Room ORM Database"
+        "Otomasi pengambilan data sesi lewat Playwright (headless browser)",
+        "Perhitungan target harga, cut loss, dan rasio risk/reward per emiten",
+        "Ekspor laporan PDF (jsPDF) dan sinkronisasi database Supabase"
       ],
-      githubUrl: "https://github.com/AdheAkbar/Adhebank",
-      badge: "Core Mobile Showcase"
+      githubUrl: "https://github.com/AdheAkbar/adhemology",
+      badge: "Finance Web App"
     },
     {
-      id: "ella-makeup",
-      name: "Ella-Makeup",
-      title: "Commercial Beauty Service & Booking App",
-      category: "MOBILE_ANDROID",
-      techStack: ["Kotlin", "Jetpack Compose", "Navigation Component", "Coil Image Loader", "State Management"],
-      description: "Aplikasi Android komersial untuk booking jadwal layanan makeup artist, katalog portofolio dinamis, dan kalkulasi tagihan pesanan secara real-time.",
+      id: "penakluk-code",
+      name: "Penakluk-Code",
+      title: "Website Pemasaran Properti (Next.js + Prisma)",
+      category: "WEB_FULLSTACK",
+      techStack: ["Next.js App Router", "TypeScript", "Prisma", "Cloudinary", "Tailwind CSS", "Framer Motion"],
+      description: "Website properti dengan katalog unit, kartu properti dinamis, filter pencarian, statistik animasi, dan form kontak. Gambar dikelola lewat Cloudinary dan data properti disiapkan melalui Prisma.",
       highlights: [
-        "Antarmuka elegan bernuansa editorial dengan animasi layout Compose",
-        "Implementasi arsitektur komponen Jetpack Compose modern",
-        "Manajemen cache gambar dan rendering katalog produk cepat"
+        "App Router Next.js dengan Server Components dan optimasi gambar",
+        "Katalog properti + pencarian dan kartu unit yang dapat difilter",
+        "Animasi statistik (CountUp + Framer Motion) dan manajemen media Cloudinary"
       ],
-      githubUrl: "https://github.com/AdheAkbar/Ella-Makeup",
-      badge: "Commercial App"
+      githubUrl: "https://github.com/AdheAkbar/Penakluk-Code",
+      badge: "Fullstack Web"
+    },
+    {
+      id: "csirt-incident-portal",
+      name: "csirt-incident-portal",
+      title: "Portal Pelaporan Insiden CSIRT",
+      category: "SECURITY",
+      techStack: ["PHP", "MySQL", "AES-256-CBC", "reCAPTCHA", "Firebase", "Apache"],
+      description: "Portal pelaporan insiden siber untuk tim CSIRT: formulir laporan dengan verifikasi reCAPTCHA, enkripsi ID laporan AES-256-CBC, dan dashboard admin untuk menyetujui serta merekap laporan.",
+      highlights: [
+        "Enkripsi ID laporan dengan AES-256-CBC dan IV acak per entri",
+        "Verifikasi reCAPTCHA pada formulir pelaporan publik",
+        "Dashboard admin: approval insiden, rekap laporan, dan status penanganan"
+      ],
+      githubUrl: "https://github.com/AdheAkbar/csirt-incident-portal",
+      badge: "Security Portal"
+    },
+    {
+      id: "adhebank",
+      name: "Adhebank",
+      title: "Aplikasi Android Pencatatan Keuangan",
+      category: "MOBILE_ANDROID",
+      techStack: ["Kotlin", "Jetpack Compose", "MVVM", "Room Database", "Coroutines & StateFlow", "Material 3"],
+      description: "Aplikasi Android untuk mencatat pengeluaran dan pemasukan harian: ringkasan saldo, daftar transaksi, dan penyimpanan lokal. Dibangun dengan Jetpack Compose dan pemisahan layer MVVM.",
+      highlights: [
+        "Pemisahan layer UI, domain, dan data (MVVM)",
+        "State asynchronous dengan Kotlin Coroutines & StateFlow",
+        "Penyimpanan transaksi lokal menggunakan Room"
+      ],
+      githubUrl: "https://github.com/AdheAkbar/Adhebank",
+      badge: "Android App"
     },
     {
       id: "autofill-maganghub",
       name: "Autofill_maganghub",
-      title: "Intelligent Chrome Extension for Portal Automation",
+      title: "Ekstensi Chrome untuk Otomasi Formulir",
       category: "BROWSER_EXTENSION",
-      techStack: ["TypeScript", "Chrome Extension MV3", "Content Scripts", "DOM MutationObserver"],
-      description: "Ekstensi browser cerdas untuk mengotomasi pengisian formulir evaluasi dan pelaporan berkala dengan parsing data terstruktur.",
+      techStack: ["JavaScript", "Chrome Extension MV3", "Content Scripts", "MutationObserver"],
+      description: "Ekstensi Chrome yang mengisi formulir kegiatan MagangHub secara otomatis dari data terstruktur, termasuk menangani dropdown dinamis yang dirender ulang oleh framework Ionic.",
       highlights: [
-        "Menggunakan Manifest V3 berstandar keamanan terbaru Google Chrome",
-        "Menembus form dropdown dinamis Ionic Framework (#ion-overlay popover)",
-        "Zero-error form filling dengan validasi skema data JSON lokal"
+        "Manifest V3 dengan content script dan penyimpanan lokal",
+        "Menangani dropdown dinamis (#ion-overlay popover) via MutationObserver",
+        "Validasi data sebelum pengisian untuk mengurangi error input"
       ],
       githubUrl: "https://github.com/AdheAkbar/Autofill_maganghub",
       badge: "Browser Tooling"
     },
     {
-      id: "penakluk-code",
-      name: "Penakluk-Code",
-      title: "Interactive Web Platform for Coding & Algorithm",
-      category: "WEB_FULLSTACK",
-      techStack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Server Actions", "Monaco Editor"],
-      description: "Platform web interaktif untuk penelusuran algoritma, problem solving kompetitif, dan visualisasi eksekusi struktur data secara real-time.",
+      id: "jelajah-quiz",
+      name: "Jelajah-quiz",
+      title: "Game Edukasi Kuis 2D (Construct 3)",
+      category: "GAME",
+      techStack: ["Construct 3", "HTML5 Game Engine", "2D Asset & Audio", "Event Sheet Logic"],
+      description: "Game kuis edukasi 2D untuk siswa sekolah dasar, dikembangkan di Construct 3 lengkap dengan aset karakter, latar, skor, dan audio. Dipakai pada program PKM di SD Negeri 2 Bumisari.",
       highlights: [
-        "App Router Next.js 14 dengan optimasi Server-Side Rendering (SSR)",
-        "Editor kode interaktif di browser dan benchmark algoritma",
-        "Desain dark-mode minimalis dengan performa 99+ Lighthouse"
+        "Proyek sumber Construct 3 (.capx) beserta seluruh aset karakter dan audio",
+        "Mekanik kuis, penilaian skor, dan layar game over",
+        "Diterapkan langsung sebagai media pembelajaran pada kegiatan PKM"
       ],
-      githubUrl: "https://github.com/AdheAkbar/Penakluk-Code",
-      badge: "Fullstack Platform"
-    },
-    {
-      id: "adhemology",
-      name: "adhemology",
-      title: "Quantitative Bandarmology & Orderbook Analytics",
-      category: "FINANCIAL_LIB",
-      techStack: ["TypeScript", "Node.js", "Statistical Analytics", "Mathematical Modeling"],
-      description: "Library komputasi kuantitatif untuk mendeteksi anomali volume, kebiasaan broker, dan aliran akumulasi/distribusi pada orderbook pasar modal BEI.",
-      highlights: [
-        "Algoritma deteksi broker habit dan kalkulasi volume weighted average price (VWAP)",
-        "Modular TypeScript package yang dapat diintegrasikan ke dashboard analis",
-        "Format data terstandarisasi untuk backtesting strategi"
-      ],
-      githubUrl: "https://github.com/AdheAkbar/adhemology",
-      badge: "Quant Engine"
-    },
-    {
-      id: "deteksi-jantung",
-      name: "DeteksiJantung-Web",
-      title: "Machine Learning Web App — Klasifikasi Risiko Jantung",
-      category: "MACHINE_LEARNING",
-      techStack: ["Python", "Machine Learning", "Web Application", "Data Preprocessing"],
-      description: "Aplikasi web berbasis machine learning untuk mengklasifikasikan risiko jantung dari parameter kesehatan yang diinput pengguna, lengkap dengan pipeline praproses data sebelum inferensi model.",
-      highlights: [
-        "Pipeline praproses data (pembersihan, normalisasi, seleksi fitur) sebelum inferensi",
-        "Antarmuka web untuk input parameter kesehatan dan tampilan hasil klasifikasi",
-        "Studi kasus penerapan model machine learning pada dataset jantung"
-      ],
-      githubUrl: "https://github.com/AdheAkbar/DeteksiJantung-Web",
-      badge: "ML Web App"
+      githubUrl: "https://github.com/AdheAkbar/Jelajah-quiz",
+      badge: "Game Edukasi"
     }
   ] as GithubProject[],
 
@@ -525,3 +525,215 @@ export const PORTFOLIO_DATA = {
     }
   ]
 };
+export interface GithubArchiveItem { name: string; description: string; language: string; url: string; pushed: string; featured?: boolean }
+
+export const GITHUB_ARCHIVE: GithubArchiveItem[] = [
+  {
+    "name": "ryan_pools_bar",
+    "description": "Sistem booking meja billiard Ryan Pools Bar (PHP/MySQL): status meja real-time, reservasi pelanggan, dan daftar waiting list dengan tema hitam-emas.",
+    "language": "PHP",
+    "url": "https://github.com/AdheAkbar/ryan_pools_bar",
+    "pushed": "2026-11-02",
+    "featured": false
+  },
+  {
+    "name": "menu_cafe",
+    "description": "Sistem menu dan kasir kafe berbasis PHP/MySQL: pemesanan per meja, manajemen menu, pembayaran QRIS, cetak struk, dan riwayat pesanan.",
+    "language": "PHP",
+    "url": "https://github.com/AdheAkbar/menu_cafe",
+    "pushed": "2026-11-02",
+    "featured": false
+  },
+  {
+    "name": "dashboard",
+    "description": "Arsip dashboard server XAMPP multibahasa (English, Deutsch, Español, Français, Português, Русский, 中文, 日本語): halaman status, phpinfo, FAQ, dan how-to untuk lingkungan pengembangan lokal.",
+    "language": "CSS",
+    "url": "https://github.com/AdheAkbar/dashboard",
+    "pushed": "2026-11-02",
+    "featured": false
+  },
+  {
+    "name": "csirt-incident-portal",
+    "description": "Portal tanggap insiden CSIRT: pelaporan insiden terenkripsi AES-256, verifikasi reCAPTCHA, dashboard admin untuk approval dan rekap laporan. PHP/MySQL + Firebase.",
+    "language": "HTML",
+    "url": "https://github.com/AdheAkbar/csirt-incident-portal",
+    "pushed": "2026-11-02",
+    "featured": true
+  },
+  {
+    "name": "DVWA-master",
+    "description": "DVWA (Damn Vulnerable Web Application) — lab latihan keamanan web: SQL Injection, XSS, CSRF, file inclusion. PHP/MySQL + Docker.",
+    "language": "PHP",
+    "url": "https://github.com/AdheAkbar/DVWA-master",
+    "pushed": "2026-11-02",
+    "featured": false
+  },
+  {
+    "name": "coffee_wan",
+    "description": "AromaSource Global — website B2B ekspor kopi dengan arsitektur PHP MVC murni: katalog produk, testimoni pelanggan, dan form inquiry.",
+    "language": "PHP",
+    "url": "https://github.com/AdheAkbar/coffee_wan",
+    "pushed": "2026-11-02",
+    "featured": false
+  },
+  {
+    "name": "Pemograman-Web-Vaganza-Village",
+    "description": "Website pemasaran kawasan hunian Vaganza Village Sukarame berbasis PHP & MySQL: halaman profil cluster, katalog unit, galeri, dan sorting data.",
+    "language": "PHP",
+    "url": "https://github.com/AdheAkbar/Pemograman-Web-Vaganza-Village",
+    "pushed": "2026-11-02",
+    "featured": false
+  },
+  {
+    "name": "Jelajah-quiz",
+    "description": "Game edukasi kuis 2D 'Jelajah Kuis' untuk siswa sekolah dasar — Construct 3 (.capx) beserta build HTML5, aset karakter, dan audio.",
+    "language": "—",
+    "url": "https://github.com/AdheAkbar/Jelajah-quiz",
+    "pushed": "2026-11-02",
+    "featured": true
+  },
+  {
+    "name": "Adhebank",
+    "description": "Tempat Penghitung Aplikasi pengeluaran dan pemasukan",
+    "language": "Kotlin",
+    "url": "https://github.com/AdheAkbar/Adhebank",
+    "pushed": "2026-10-27",
+    "featured": true
+  },
+  {
+    "name": "Ella-Makeup",
+    "description": "Ella BOOK",
+    "language": "Kotlin",
+    "url": "https://github.com/AdheAkbar/Ella-Makeup",
+    "pushed": "2026-10-27",
+    "featured": false
+  },
+  {
+    "name": "adhemology",
+    "description": "Pembaca pergerakan saham",
+    "language": "TypeScript",
+    "url": "https://github.com/AdheAkbar/adhemology",
+    "pushed": "2026-10-27",
+    "featured": true
+  },
+  {
+    "name": "teleprompter",
+    "description": "Telemprompter",
+    "language": "JavaScript",
+    "url": "https://github.com/AdheAkbar/teleprompter",
+    "pushed": "2026-10-27",
+    "featured": false
+  },
+  {
+    "name": "juice-reciepe",
+    "description": "Resepn jus",
+    "language": "JavaScript",
+    "url": "https://github.com/AdheAkbar/juice-reciepe",
+    "pushed": "2026-10-27",
+    "featured": false
+  },
+  {
+    "name": "fitness-track",
+    "description": "fitness-track",
+    "language": "HTML",
+    "url": "https://github.com/AdheAkbar/fitness-track",
+    "pushed": "2026-10-27",
+    "featured": false
+  },
+  {
+    "name": "DeteksiJantung-Web",
+    "description": "Machine learning website dengan case jantung",
+    "language": "—",
+    "url": "https://github.com/AdheAkbar/DeteksiJantung-Web",
+    "pushed": "2026-10-27",
+    "featured": false
+  },
+  {
+    "name": "Autofill_maganghub",
+    "description": "Untuk membantu mengisi data",
+    "language": "JavaScript",
+    "url": "https://github.com/AdheAkbar/Autofill_maganghub",
+    "pushed": "2026-10-27",
+    "featured": true
+  },
+  {
+    "name": "PBS",
+    "description": "Projek",
+    "language": "—",
+    "url": "https://github.com/AdheAkbar/PBS",
+    "pushed": "2025-03-06",
+    "featured": false
+  },
+  {
+    "name": "Penakluk-Code",
+    "description": "—",
+    "language": "TypeScript",
+    "url": "https://github.com/AdheAkbar/Penakluk-Code",
+    "pushed": "2025-01-25",
+    "featured": true
+  },
+  {
+    "name": "mobile-fix",
+    "description": "—",
+    "language": "Dart",
+    "url": "https://github.com/AdheAkbar/mobile-fix",
+    "pushed": "2024-12-17",
+    "featured": false
+  },
+  {
+    "name": "mobile-adhe",
+    "description": "—",
+    "language": "—",
+    "url": "https://github.com/AdheAkbar/mobile-adhe",
+    "pushed": "2024-12-17",
+    "featured": false
+  },
+  {
+    "name": "mobile2",
+    "description": "—",
+    "language": "—",
+    "url": "https://github.com/AdheAkbar/mobile2",
+    "pushed": "2024-12-03",
+    "featured": false
+  },
+  {
+    "name": "Adhe-mob",
+    "description": "—",
+    "language": "—",
+    "url": "https://github.com/AdheAkbar/Adhe-mob",
+    "pushed": "2024-11-19",
+    "featured": false
+  },
+  {
+    "name": "Adhe-mobile2",
+    "description": "Apa aja",
+    "language": "Dart",
+    "url": "https://github.com/AdheAkbar/Adhe-mobile2",
+    "pushed": "2024-10-31",
+    "featured": false
+  },
+  {
+    "name": "bankgart",
+    "description": "—",
+    "language": "—",
+    "url": "https://github.com/AdheAkbar/bankgart",
+    "pushed": "2024-05-19",
+    "featured": false
+  },
+  {
+    "name": "UTS-PEMMOBILE-IF22A",
+    "description": "—",
+    "language": "—",
+    "url": "https://github.com/AdheAkbar/UTS-PEMMOBILE-IF22A",
+    "pushed": "2024-05-12",
+    "featured": false
+  },
+  {
+    "name": "uts-project-vaganza",
+    "description": "UTS PEMROGRAMAN MOBILE IF 22A",
+    "language": "—",
+    "url": "https://github.com/AdheAkbar/uts-project-vaganza",
+    "pushed": "2024-05-12",
+    "featured": false
+  }
+];

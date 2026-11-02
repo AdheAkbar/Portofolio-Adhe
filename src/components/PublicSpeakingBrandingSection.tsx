@@ -227,11 +227,14 @@ export const PublicSpeakingBrandingSection: React.FC = () => {
               {
                 id: 'slot-host',
                 title: 'Dokumentasi Publikasi Media',
-                event: 'Kegiatan Publikasi Resmi',
-                ratio: 'Aspek 16:9 · Media',
-                placeholder: 'Slot Foto Liputan & Publikasi'
+                event: 'PPID BAPPEDA · Instagram Reels',
+                ratio: 'Aspek 9:16 · Media Sosial',
+                placeholder: 'Slot Foto Liputan & Publikasi',
+                image: '/assets/evidence_bappeda_publikasi_media.jpg',
+                alt: 'Konten Instagram Reels PPID BAPPEDA: Cuma Modal HP, Suara Kamu Nyampe ke DPRD',
+                fit: 'contain'
               }
-            ] as { id: string; title: string; event: string; ratio: string; placeholder: string; image?: string; alt?: string }[]).map((slot) => (
+            ] as { id: string; title: string; event: string; ratio: string; placeholder: string; image?: string; alt?: string; fit?: 'cover' | 'contain' }[]).map((slot) => (
               <div
                 key={slot.id}
                 className="bg-white rounded-2xl p-4 border border-dashed border-slate-300 hover:border-pink-400 hover:shadow-sm transition-all duration-300 flex flex-col justify-between group cursor-pointer"
@@ -242,7 +245,7 @@ export const PublicSpeakingBrandingSection: React.FC = () => {
                     src={slot.image}
                     alt={slot.alt || slot.title}
                     loading="lazy"
-                    className="w-full aspect-4/3 object-cover rounded-xl border border-slate-200 mb-3 group-hover:border-pink-300 transition-colors"
+                    className={`w-full aspect-4/3 rounded-xl border border-slate-200 mb-3 group-hover:border-pink-300 transition-colors ${slot.fit === 'contain' ? 'object-contain bg-slate-100' : 'object-cover'}`}
                   />
                 ) : (
                   <div className="w-full aspect-4/3 rounded-xl bg-slate-50 border border-slate-200 flex flex-col items-center justify-center p-4 text-center group-hover:bg-pink-50/50 transition-colors mb-3">

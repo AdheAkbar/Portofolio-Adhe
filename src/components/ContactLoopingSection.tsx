@@ -145,7 +145,7 @@ export const ContactLoopingSection: React.FC = () => {
                 <Check className="w-3.5 h-3.5" /> SIAP ONBOARDING 2026
               </div>
               <div className="text-slate-500 text-[11px] mt-0.5 font-semibold">
-                On-Site Bandar Lampung · Hybrid · Remote
+                Bandar Lampung, Indonesia
               </div>
             </div>
           </div>
@@ -331,9 +331,17 @@ export const ContactLoopingSection: React.FC = () => {
               <h3 className="text-lg font-heading font-extrabold text-[#0B1E3D] mb-2">
                 Kota Bandar Lampung, Lampung
               </h3>
-              <p className="text-xs text-slate-600 font-sans leading-relaxed mb-4">
-                Siap on-site di area Lampung, serta siap hybrid atau remote untuk penempatan kerja nasional maupun proyek teknologi.
+              <p className="text-xs text-slate-600 font-sans leading-relaxed mb-3">
+                Berbasis di Kota Bandar Lampung dengan mobilitas kerja on-site dan hybrid di wilayah Lampung. Fokus kerja mencakup empat lini: <strong>IT Operational</strong> (dukungan perangkat, server, dan pengguna), <strong>Media &amp; Komunikasi</strong> (produksi konten publikasi, foto/video, pengelolaan kanal digital), <strong>Fullstack Developer</strong> (web &amp; Android dengan PHP, Next.js/React, dan Kotlin), serta <strong>Jaringan</strong> (splicing fiber optic, MikroTik/Cisco, OPM/OTDR, operasional NOC/FOC).
               </p>
+
+              <div className="flex flex-wrap gap-1.5 mb-4">
+                {['IT Operational', 'Media & Komunikasi', 'Fullstack Developer', 'Jaringan'].map((tag) => (
+                  <span key={tag} className="px-2 py-0.5 rounded-lg bg-slate-100 border border-slate-200 text-[10px] font-mono font-bold text-slate-700">
+                    {tag}
+                  </span>
+                ))}
+              </div>
               
               <div className="space-y-2 border-t border-slate-200 pt-3 text-xs font-mono">
                 <div className="flex items-center justify-between text-slate-600">
@@ -342,7 +350,7 @@ export const ContactLoopingSection: React.FC = () => {
                 </div>
                 <div className="flex items-center justify-between text-slate-600">
                   <span>Target Bidang:</span>
-                  <span className="text-[#0B1E3D] font-bold">IT · Media · Komunikasi</span>
+                  <span className="text-[#0B1E3D] font-bold text-right">IT Ops · Media · Fullstack · Jaringan</span>
                 </div>
                 <div className="flex items-center justify-between text-slate-600">
                   <span>Gelar Akademik:</span>

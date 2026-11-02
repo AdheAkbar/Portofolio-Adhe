@@ -416,9 +416,6 @@ export const LitaGlobalSection: React.FC = () => {
                   <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center shadow-2xs">
                     {pil.icon}
                   </div>
-                  <span className="text-[10px] font-mono font-bold text-slate-500">
-                    KOMPETENSI {pil.code}
-                  </span>
                 </div>
 
                 <h3 className="text-lg font-heading font-extrabold text-[#0B1E3D] mb-2">

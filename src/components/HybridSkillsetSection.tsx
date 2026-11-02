@@ -50,6 +50,7 @@ export const HybridSkillsetSection: React.FC = () => {
   ];
 
   const creativeSkills = [
+    { name: 'Layanan Pelanggan Digital', level: '4.500+ order selesai · rating bintang 5 (Lita Global)', tag: 'SERVICE' },
     { name: 'On-Camera Hosting', level: 'Finalis Brand Ambassador Jaya Bakery & Duta Mekhanai', tag: 'TALENT' },
     { name: 'Video Editing (CapCut Pro)', level: '30+ Konten Publikasi Campuran Humas BAPPEDA', tag: 'PRODUCTION' },
     { name: 'Desain Grafis (Canva)', level: 'SKPI Nilai A Berbasis Uji Kompetensi', tag: 'BRANDING' },
@@ -62,7 +63,7 @@ export const HybridSkillsetSection: React.FC = () => {
     { name: 'Android Kotlin Compose', desc: 'Arsitektur MVVM, Room Database, StateFlow & UDF', badge: 'MOBILE' },
     { name: 'Next.js 14 App Router', desc: 'React, TypeScript, Tailwind CSS & Server Components', badge: 'FULLSTACK' },
     { name: 'Chrome Extension MV3', desc: 'Manifest V3, DOM Parsing & Autofill Form Otomatis', badge: 'BROWSER MV3' },
-    { name: 'Prompt Engineering & Agents', desc: 'Workflow AI Terapan, Claude, ChatGPT, Gemini & Router', badge: 'AUTOMATION' }
+    { name: 'AI Toolstack & Agent Automation', desc: 'Claude, ChatGPT, Gemini + Hermes Agent otonom untuk kerja teknis', badge: 'AI OPS' }
   ];
 
   const softSkills = [
