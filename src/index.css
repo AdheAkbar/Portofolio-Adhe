@@ -1,0 +1,393 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-serif-italic: 'Playfair Display', serif;
+    --font-handwriting: 'Caveat', cursive;
+    --font-syne: 'Syne', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #F5F6F8;
+    color: #0F172A;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+    font-weight: 800;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-syne {
+    font-family: var(--font-syne);
+  }
+
+  .font-serif-italic {
+    font-family: var(--font-serif-italic);
+    font-style: italic;
+  }
+
+  .font-handwriting {
+    font-family: var(--font-handwriting);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Figma Canvas Dot Grid Utility */
+.figma-dot-grid {
+  background-color: #FFFFFF;
+  background-image: radial-gradient(rgba(148, 163, 184, 0.45) 1.25px, transparent 1.25px);
+  background-size: 24px 24px;
+}
+
+/* Editorial & Micro-Typography Utilities */
+.tracking-editorial {
+  letter-spacing: 0.22em;
+}
+
+.tracking-wide-ui {
+  letter-spacing: 0.12em;
+}
+
+/* Vertical Text Utility */
+.vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+.vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+/* Ambient Floating Ellipses / Rings (Behance Light Style) */
+.ambient-ring-light {
+  position: absolute;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  pointer-events: none;
+}
+
+/* Gallery Light Cards */
+.card-light {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-light:hover {
+  border-color: rgba(0, 0, 0, 0.18);
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.08);
+}
+
+/* Featured Dark Project Card (From Behance) */
+.card-dark {
+  background: #12151C;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  color: #FFFFFF;
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-dark:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F3F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* CRT Warp Effect */
+@keyframes crtWarp {
+  0% { transform: scale(1) translateY(0); filter: brightness(1); }
+  50% { transform: scale(1.02) translateY(-6px); filter: brightness(1.2); }
+  100% { transform: scale(1) translateY(0); filter: brightness(1); }
+}
+
+.crt-warp-active {
+  animation: crtWarp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Fluid Slide Transitions & UI Motion */
+@keyframes slideRightIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideLeftIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-slide-right {
+  animation: slideRightIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-slide-left {
+  animation: slideLeftIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-scale {
+  animation: fadeInScale 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* 3D Perspective & Spatial Depth */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+.transform-3d {
+  transform-style: preserve-3d;
+}
+
+.card-3d-tilt {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.card-3d-tilt:hover {
+  transform: perspective(1000px) rotateX(2.5deg) rotateY(-2.5deg) translateY(-8px) scale3d(1.015, 1.015, 1.015);
+  box-shadow: 0 25px 50px -12px rgba(11, 30, 61, 0.16), 0 0 0 1px rgba(37, 99, 235, 0.25);
+}
+
+/* Kinetic 3D Letter Reveal */
+@keyframes kinetic3dFlip {
+  0% {
+    opacity: 0;
+    transform: perspective(800px) rotateX(-50deg) translateY(24px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(800px) rotateX(0deg) translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-kinetic-3d {
+  animation: kinetic3dFlip 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Laser Shimmer Effect */
+@keyframes laserShimmer {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(220%); }
+}
+
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  animation: laserShimmer 3s infinite ease-in-out;
+  pointer-events: none;
+}
+
+/* Tactile Click Pop */
+.click-pop {
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.click-pop:active {
+  transform: scale(0.96);
+}
+
+/* Dynamic Entrance & Text Reveal Keyframes - Zero Blinking, Zero Disappearing */
+@keyframes textRevealUp {
+  0% {
+    opacity: 0.85;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardCascade {
+  0% {
+    opacity: 0.9;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes badgePop {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-reveal-up {
+  animation: textRevealUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-cascade {
+  animation: cardCascade 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-badge-pop {
+  animation: badgePop 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Stagger animation delay helper utilities */
+.delay-100 { animation-delay: 100ms; }
+.delay-150 { animation-delay: 150ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-250 { animation-delay: 250ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+
+/* Figma Creative Studio & Tangible Artboard Elements */
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+.washi-tape-top {
+  position: relative;
+}
+.washi-tape-top::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  width: 90px;
+  height: 22px;
+  background: rgba(254, 240, 138, 0.7);
+  backdrop-filter: blur(2px);
+  border: 1px dashed rgba(202, 138, 4, 0.4);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  z-index: 20;
+}
+
+.washi-tape-blue::before {
+  background: rgba(186, 230, 253, 0.75);
+  border-color: rgba(2, 132, 199, 0.35);
+}
+
+.washi-tape-pink::before {
+  background: rgba(251, 207, 232, 0.75);
+  border-color: rgba(219, 39, 119, 0.35);
+}
+
+.washi-tape-green::before {
+  background: rgba(187, 247, 208, 0.75);
+  border-color: rgba(22, 163, 74, 0.35);
+}
+
+/* Wax Seal Emboss */
+.wax-seal {
+  position: relative;
+  background: radial-gradient(circle at 35% 35%, #F59E0B 0%, #D97706 60%, #B45309 100%);
+  border: 3px double #FEF3C7;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6), 0 4px 12px rgba(180, 83, 9, 0.3);
+}
+
+/* Blueprint Grid Canvas */
+.blueprint-grid {
+  background-color: #0E1A2E;
+  background-image: 
+    linear-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.12) 1px, transparent 1px),
+    linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+/* Marquee Animation for Mastered Apps & AI Tools */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeReverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marqueeReverse 32s linear infinite;
+}
+
+/* Jeda dikontrol tombol (state React), bukan hover, agar tidak saling bertabrakan */
+
+
+
