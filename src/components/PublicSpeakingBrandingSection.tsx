@@ -20,24 +20,24 @@ export const PublicSpeakingBrandingSection: React.FC = () => {
   const activities = [
     {
       code: '01',
-      title: 'Finalis Brand Ambassador Jaya Bakery 2023',
-      rank: 'FINALIS DUTA MEREK',
+      title: 'Finalis Pemilihan Brand Ambassador Jaya Bakery 2023',
+      rank: 'FINALIS BRAND AMBASSADOR',
       rankBadge: 'text-amber-800 border-amber-300 bg-amber-100/90',
       organizer: 'PT Jaya Bakery Indonesia',
-      period: 'Mei – Juni 2023',
+      period: 'Tahun 2023',
       icon: <Crown className="w-5 h-5 text-amber-600" />,
-      desc: 'Terpilih sebagai Finalis Brand Ambassador Jaya Bakery 2023. Terlibat aktif dalam pembuatan materi promosi kreatif, interaksi publik dengan konsumen, serta perwakilan citra positif brand.',
+      desc: 'Lolos seleksi tahap akhir Pemilihan Brand Ambassador Jaya Bakery 2023. Terlibat dalam pembuatan materi promosi kreatif, interaksi publik dengan konsumen, serta menjadi representasi citra positif brand.',
       tags: ['Brand Representation', 'Promosi Kreatif', 'Interaksi Publik', 'Media Sosial']
     },
     {
       code: '02',
-      title: 'Finalis Muli Mekhanai Pesawaran 2023',
-      rank: 'FINALIS MEKHANAI PESAWARAN',
+      title: 'Finalis Pemilihan Muli Mekhanai Kabupaten Pesawaran 2023',
+      rank: 'FINALIS MULI MEKHANAI',
       rankBadge: 'text-pink-800 border-pink-300 bg-pink-100/90',
-      organizer: 'Dinas Pariwisata & Ekonomi Kreatif Kab. Pesawaran',
+      organizer: 'Pemerintah Kabupaten Pesawaran (Dinas Pariwisata & Ekonomi Kreatif)',
       period: 'Tahun 2023',
       icon: <Mic2 className="w-5 h-5 text-pink-600" />,
-      desc: 'Mewakili pemuda dalam ajang pemilihan duta daerah Kabupaten Pesawaran 2023. Mengikuti pembekalan wawasan kebudayaan lokal, advokasi potensi pariwisata daerah, serta representasi kegiatan resmi.',
+      desc: 'Lolos ke tahap final Pemilihan Muli Mekhanai Kabupaten Pesawaran 2023 sebagai perwakilan duta daerah. Mengikuti pembekalan wawasan kebudayaan lokal, advokasi potensi pariwisata daerah, serta tampil pada kegiatan resmi kepemerintahan.',
       tags: ['Duta Pariwisata', 'Budaya Daerah', 'Komunikasi Publik', 'Representasi Daerah']
     },
     {
