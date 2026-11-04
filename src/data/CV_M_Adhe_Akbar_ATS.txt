@@ -1,0 +1,102 @@
+1
+M. ADHE AKBAR
+Bandar Lampung, Lampung | +62 895-6365-71654 | akbarade496@gmail.com | linkedin.com/in/madheakbar |
+github.com/AdheAkbar
+SUMMARY PROFILE
+Lulusan S1 Informatika Universitas Teknokrat Indonesia (IPK 3,59/4,00, Cum Laude) dengan fokus utama pada analisis dan pengolahan
+data, penertiban administrasi serta pembakuan SOP, pengembangan perangkat lunak, dan operasional IT. Memiliki rekam jejak riset
+mengolah 18.869 data ulasan pengguna 4 aplikasi dompet digital (DANA, OVO, DOKU, LinkAja) yang terbit pada Jurnal BITS (SINTA 3,
+2026) dengan akurasi model Naive Bayes 88,5% dan AUC-ROC 0,9237. Berpengalaman mereview dan membakukan SOP internal,
+mencatat notulensi rapat lintas bidang, serta memproduksi 30+ konten publikasi resmi di BAPPEDA Provinsi Lampung. Terbiasa
+membangun alat bantu otomasi kerja dan sistem informasi (26 repositori publik di github.com/AdheAkbar), memvalidasi data lapangan
+di Teman Baik Lampung, menjaga respon layanan di bawah 5 menit pada 4.500+ pesanan di Lita Global, serta menangani
+troubleshooting jaringan saat magang SMK di PT Sumatra Multimedia Solusi. Teliti, komunikatif, terbiasa berkolaborasi lintas bidang, dan
+siap mempelajari proses bisnis maupun standar operasional baru.
+EDUCATION
+Universitas Teknokrat Indonesia Bandar Lampung, Lampung
+S1 Informatika (S.Kom) | Computer Science September 2022 - Juli 2026
+IPK: 3,59 / 4,00 (Cum Laude)
+Publikasi Ilmiah (SINTA 3): “Perbandingan Algoritma Naive Bayes dan K-Nearest Neighbor untuk Analisis Sentimen Pengguna
+Dompet Digital di Google Play Store”. Mengolah dan menganalisis 18.869 ulasan dari 4 aplikasi dompet digital (DANA, OVO, DOKU,
+LinkAja), ekstraksi TF-IDF 5.000 fitur; Naive Bayes unggul dengan akurasi 88,5% dan AUC-ROC 0,9237. Terbit 2026 di Jurnal BITS
+(SINTA 3).
+Prestasi Teknokrat Academic Expo 2025: Juara 1 Animasi 2D/3D, Juara 2 Machine Learning (Python), Juara 3 Augmented Reality &
+Virtual Reality (AR/VR).
+Sertifikasi Kompetensi (SKPI) Nilai A: Kompetensi Administrasi Perkantoran, Pelatihan Jaringan MikroTik, Kompetensi Jaringan
+Komputer & Troubleshooting, Kompetensi Desain Grafis.
+SMKN 1 Bandar Lampung Bandar Lampung, Lampung
+Teknik Komputer dan Jaringan (TKJ) Juli 2019 - Juni 2022
+Sertifikasi Profesi Nasional (Saat Lulus SMK): Ahli Kompeten Teknik Komputer & Jaringan (MikroTik Networking), BNSP KKNI Level II.
+WORK & INTERNSHIP EXPERIENCE
+BAPPEDA Provinsi Lampung (Badan Perencanaan Pembangunan Daerah) Bandar Lampung, Lampung
+IT Administrative, Public Relations & Digital Content Intern (Magang S1) Juli 2025 - September 2025
+Mencatat notulensi rapat lintas bidang secara terstruktur serta mereview dan membakukan dokumen SOP internal beberapa bidang
+untuk meningkatkan ketertiban administrasi dan kejelasan prosedur kerja dinas.
+Menyunting sekitar 30 konten publikasi campuran (berita acara, dokumentasi kegiatan, hingga 1 konten Instagram reel) serta materi
+publikasi lainnya menggunakan CapCut dan Canva.
+Menjadi on-camera talent edukasi dari sudut pandang mahasiswa dan penulis naskah kegiatan kedinasan untuk menyampaikan
+informasi program dinas secara komunikatif.
+Lita Global Online / Platform Digital
+Freelance Player & Digital Client Relations Specialist, Self-Employed September 2024 - Agustus 2026
+Menyelesaikan lebih dari 4.500 order layanan interaktif digital dengan menjaga kualitas komunikasi profesional dan
+mempertahankan rating pelanggan bintang 5 secara konsisten.
+Menjaga kecepatan waktu respon komunikasi di bawah 5 menit serta mempertahankan standar layanan dan retensi pengguna secara
+berkelanjutan.
+Teman Baik Lampung Bandar Lampung, Lampung
+Field Data Enumerator & Distribution Staff Oktober 2023 - Juni 2024
+Melakukan survei lapangan door-to-door dan pengumpulan data digital via aplikasi mobile untuk pemetaan data penerima manfaat
+secara akurat.
+Memvalidasi kelengkapan dan integritas data penerima sebelum distribusi bantuan serta berkoordinasi dengan tim lapangan agar
+target penyaluran selesai tepat waktu sesuai prosedur.
+PT SMS (Sumatra Multimedia Solusi) Bandar Lampung, Lampung
+IT Support, NOC & FOC Technician (Magang SMK TKJ) Juni 2021 - Oktober 2021
+Menjalankan operasional NOC/FOC meliputi monitoring trafik jaringan, diagnosa titik gangguan link, pengukuran redaman
+(OPM/OTDR), dan troubleshooting konektivitas fiber optic.
+Menangani technical support perangkat keras, perangkat lunak, penyambungan fiber optic splicing, dan jaringan LAN/WAN
+(MikroTik), termasuk pemeliharaan preventif dan koordinasi instalasi pelanggan.
+
+2
+PROGRAMMING PROJECTS & COMMUNITY SERVICE
+Proyek Unggulan GitHub (26 Repositori Publik) github.com/AdheAkbar
+6 Proyek Unggulan Pengembangan Web, Android, Pengolahan Data & Otomasi 2022 - 2026
+Portal Pelaporan Insiden CSIRT (PHP, MySQL, AES-256-CBC, reCAPTCHA, Firebase): Membangun formulir pelaporan insiden siber
+dengan enkripsi ID AES-256-CBC dan dashboard admin untuk proses verifikasi (approval) serta rekapitulasi laporan.
+Autofill_maganghub (Chrome Extension MV3): Mengembangkan ekstensi pengisi formulir web otomatis yang menangani elemen
+dropdown dinamis berbasis Ionic via MutationObserver untuk mempercepat proses input data berulang.
+Adhemology (Next.js 16, TypeScript, Supabase, Playwright, Gemini AI, jsPDF): Membangun kalkulator analisis target harga saham
+dengan otomasi pengambilan data Stockbit via Playwright dan ekspor dokumen laporan PDF.
+Adhebank (Kotlin, Jetpack Compose, MVVM, Room): Merancang aplikasi Android pencatatan pengeluaran dan pemasukan keuangan
+secara terstruktur dengan Coroutines dan StateFlow.
+AromaSource Global / coffee_wan (PHP MVC): Membangun website B2B ekspor kopi yang memuat katalog produk, testimoni, dan
+formulir permintaan pelanggan (inquiry) dengan arsitektur MVC murni.
+Jelajah Quiz (Construct 3): Mengembangkan game kuis edukasi 2D untuk siswa SD yang diterapkan pada program PKM di SD Negeri 2
+Bumisari (60+ siswa).
+SD Negeri 2 Bumisari (Program Kreativitas Mahasiswa / PKM) Pesawaran, Lampung
+Educational Game Developer (“Jelajah Quiz”) & Digital Literacy Facilitator September 2025 - Oktober 2025
+Mengembangkan game kuis edukasi “Jelajah Quiz” dan berkolaborasi memfasilitasi sesi literasi teknologi bagi 60+ siswa kelas 4-6 SD.
+Vaganza Village & Sinia Coffee (Program Kreativitas Mahasiswa / PKM) Bandar Lampung, Lampung
+Web Application Developer & Digital Branding Contributor September 2024
+Membangun dan mendeploy website promosi Vaganza Village untuk memperluas jangkauan pemasaran digital, serta melaksanakan
+program pemberdayaan digital komunitas di Sinia Coffee.
+STUDENT ACTIVITIES & BRANDING EXPERIENCE
+Teknokrat Entrepreneur Vaganza (Universitas Teknokrat Indonesia) Bandar Lampung, Lampung
+Fashion Model & Visual Branding Collaborator Agustus 2023
+Model runway dan lookbook untuk 3 brand fashion lokal dalam pemotretan katalog promosi produk.
+Muli Mekhanai Kabupaten Pesawaran (Pageant Duta Pariwisata & Budaya) Pesawaran, Lampung
+Grand Finalist, Pageant Duta Pariwisata & Budaya Daerah 2023
+Finalis Pemilihan Muli Mekhanai Kabupaten Pesawaran 2023 yang diselenggarakan Dinas Pariwisata & Ekonomi Kreatif; terlibat
+produksi video promosi pariwisata di Hutan Mangrove Pesawaran dan Hotel Akar sebagai on-camera talent.
+Brand Ambassador Jaya Bakery 2023 (Seleksi Brand Ambassador Komersial) Bandar Lampung, Lampung
+Top 15 Finalist, Seleksi Brand Ambassador & Content Creator Mei 2023 - Juni 2023
+Finalis melalui uji tertulis dan wawancara; mengikuti workshop pembuatan konten influencer, photoshoot komersial, roadshow multi￾outlet, dan uji public speaking.
+SKILLS, CERTIFICATIONS & LANGUAGES
+Programming, Data & Administrative Skills: Analisis & Pengolahan Data (Python, TF-IDF, Naive Bayes, KNN, MS Excel), Review &
+Pembakuan SOP, Administrasi Perkantoran, Penyusunan Notulensi & Laporan Kegiatan, Web & Android Development (PHP MVC, Next.js,
+React, TypeScript, Kotlin/Jetpack Compose, HTML/CSS), Otomasi Proses & Pelaporan (Playwright, Chrome Extension MV3, jsPDF),
+Network Engineering & Troubleshooting (NOC, FOC, LAN/WAN, Fiber Optic Splicing, MikroTik, OPM/OTDR), Digital Content Production,
+Video Editing, Scriptwriting.
+Software & Tools: Microsoft Office (Word, Excel, PowerPoint), VS Code, Next.js, Python, MikroTik RouterOS, CapCut Pro, Canva, Figma,
+Git & GitHub (26 Repositori Publik), AI Coding & Productivity Assistants (Claude, ChatGPT, Gemini, Hermes Agent).
+Soft Skills: Komunikasi Profesional & Public Speaking, Notulensi Rapat Lintas Bidang, Ketelitian Data & Administrasi, Client Retention &
+Relationship Management, Analytical Problem-Solving, Cross-Functional Collaboration, High Adaptability.
+Languages: Bahasa Indonesia (Native), Bahasa Inggris (Intermediate / Professional Working Proficiency).

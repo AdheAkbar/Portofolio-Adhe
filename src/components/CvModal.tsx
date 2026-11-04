@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import atsTextContent from '../data/CV_M_Adhe_Akbar_ATS.txt?raw';
 import { 
   X, 
   Copy, 
@@ -21,70 +22,7 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const pdfUrl = '/assets/CV_M_Adhe_Akbar_ATS.pdf';
-
-  const atsText = `CURRICULUM VITAE
-M. ADHE AKBAR, S.Kom.
-Bandar Lampung, Lampung, Indonesia | +62 895-6365-71654 | akbarade496@gmail.com
-LinkedIn: linkedin.com/in/madheakbar | GitHub: github.com/AdheAkbar
-
-RINGKASAN EKSEKUTIF / SUMMARY PROFILE
-Lulusan S1 Informatika Universitas Teknokrat Indonesia (IPK 3,59/4,00, Cum Laude) dengan fokus utama pada pengembangan perangkat lunak fullstack, operasional jaringan IT, serta administrasi dan dokumentasi sistem. Penulis Pertama jurnal ilmiah terakreditasi nasional SINTA 3 (Jurnal BITS 2026) mengenai analisis sentimen 18.869 ulasan pengguna aplikasi dompet digital (DANA, OVO, LinkAja, DOKU) menggunakan Machine Learning Naive Bayes dengan capaian akurasi 88,5% dan AUC-ROC 0,9237. Membangun 26 repositori proyek publik di GitHub (github.com/AdheAkbar), antara lain portal pelaporan insiden siber CSIRT, website B2B ekspor kopi, ekstensi pengisi formulir web otomatis (autofill), kalkulator saham otomatis, dan aplikasi keuangan Android. Berpengalaman membakukan SOP internal dan mencatat notulensi rapat lintas bidang di BAPPEDA Provinsi Lampung (30+ konten publikasi resmi), menangani operasional jaringan ISP (fiber optic splicing, MikroTik, OPM/OTDR, NOC/FOC) di PT Sumatra Multimedia Solusi, serta menyelesaikan 4.500+ transaksi layanan digital dengan waktu respon di bawah 5 menit. Siap berkontribusi secara adaptif pada bidang pengembangan perangkat lunak, operasional & dukungan IT, dokumentasi sistem, maupun peningkatan efisiensi proses kerja.
-
-PENDIDIKAN FORMAL
-1. Universitas Teknokrat Indonesia — Bandar Lampung (September 2022 – Juli 2026)
-   - S1 Informatika (S.Kom.), Computer Science | IPK: 3,59 / 4,00 (Cum Laude)
-   - Publikasi Ilmiah SINTA 3 (Penulis Pertama): “Perbandingan Algoritma Naive Bayes dan K-Nearest Neighbor untuk Analisis Sentimen Pengguna Dompet Digital di Google Play Store” (Jurnal BITS 2026).
-   - Prestasi Teknokrat Academic Expo 2025: Juara 1 Animasi 2D/3D, Juara 2 Machine Learning (Python), Juara 3 Augmented Reality & Virtual Reality (AR/VR).
-   - Sertifikasi Kompetensi (SKPI) Nilai A: Pelatihan Jaringan MikroTik, Kompetensi Jaringan Komputer & Troubleshooting, Kompetensi Administrasi Perkantoran, Kompetensi Desain Grafis.
-
-2. SMKN 1 Bandar Lampung (Juli 2019 – Juni 2022)
-   - Jurusan: Teknik Komputer dan Jaringan (TKJ)
-   - Sertifikasi Profesi Nasional (BNSP): Ahli Kompeten Teknik Komputer & Jaringan (MikroTik Networking), KKNI Level II.
-
-PENGALAMAN KERJA & MAGANG
-1. BAPPEDA Provinsi Lampung (Badan Perencanaan Pembangunan Daerah) — Bandar Lampung (Juli 2025 – September 2025)
-   IT Administrative, Public Relations & Digital Content Intern
-   - Mereview dan membakukan dokumen SOP internal pada beberapa bidang serta mencatat notulensi rapat lintas bidang secara terstruktur untuk meningkatkan ketertiban administrasi dinas.
-   - Menyunting sekitar 30 konten publikasi campuran (berita acara, dokumentasi kegiatan, hingga konten Instagram reel) serta materi publikasi lainnya menggunakan CapCut dan Canva.
-   - Menulis naskah kegiatan kedinasan dan tampil sebagai on-camera talent edukasi dari sudut pandang mahasiswa untuk menyampaikan informasi program dinas secara komunikatif.
-
-2. Lita Global Platform — Remote / Online (September 2024 – Agustus 2026)
-   Freelance Player & Digital Client Relations Specialist, Self-Employed
-   - Menyelesaikan lebih dari 4.500 order layanan interaktif digital dengan mempertahankan penilaian pelanggan bintang 5 (5,0/5,0) secara konsisten.
-   - Menjaga kecepatan waktu respon komunikasi di bawah 5 menit serta mempertahankan standar layanan dan retensi pengguna secara berkelanjutan.
-
-3. Teman Baik Lampung — Kota Bandar Lampung (Oktober 2023 – Juni 2024)
-   Field Data Enumerator & Distribution Staff
-   - Melakukan survei lapangan door-to-door dan pengumpulan data digital melalui aplikasi mobile untuk pemetaan penerima manfaat secara akurat.
-   - Memvalidasi integritas data penerima sebelum distribusi bantuan dan berkoordinasi dengan tim lapangan agar target penyaluran selesai tepat waktu.
-
-4. PT Sumatra Multimedia Solusi (PT SMS) — Bandar Lampung (Juni 2021 – Oktober 2021)
-   IT Support, NOC & FOC Technician (Internship)
-   - Menjalankan operasional NOC/FOC meliputi monitoring trafik jaringan, diagnosa titik gangguan link, pengukuran redaman (OPM/OTDR), dan troubleshooting konektivitas fiber optic.
-   - Menangani technical support perangkat keras, perangkat lunak, penyambungan fiber optic splicing, dan jaringan LAN/WAN (MikroTik), termasuk pemeliharaan preventif serta koordinasi instalasi pelanggan.
-
-PROYEK UNGGULAN GITHUB & PKM (26 REPOSITORI PUBLIK)
-- Portal Pelaporan Insiden CSIRT (PHP, MySQL, AES-256-CBC, reCAPTCHA, Firebase)
-- Autofill_maganghub (Chrome Extension MV3, DOM MutationObserver)
-- Adimology / adhemology (Next.js 16, TypeScript, Supabase, Playwright, Gemini AI, jsPDF)
-- Adhebank (Kotlin, Jetpack Compose, MVVM, Room, Coroutines & StateFlow)
-- AromaSource Global / coffee_wan (PHP MVC B2B Ekspor Kopi)
-- Jelajah Quiz (Construct 3 Game Edukasi SD Negeri 2 Bumisari, PKM 60+ Siswa)
-- Website Pemasaran Vaganza Village & Sinia Coffee (PKM Digital Branding)
-
-SERTIFIKASI PROFESI & KOMPETENSI RESMI
-1. Sertifikat Kompetensi BNSP KKNI Level II Teknik Komputer dan Jaringan (Reg: J.777 00014 2022)
-2. Sertifikat Pelatihan MikroTik RouterOS (LPBM UTI No: 0059/G.121/IIb2.3/2025)
-3. Sertifikat Kompetensi Jaringan Komputer & Troubleshooting (LPBM UTI No: 0030/G.121/IIa2.3/2026)
-4. Sertifikat Kompetensi Administrasi Perkantoran (LPBM UTI No: 0248/G.121/IIa2.1/2025)
-5. Sertifikat Kompetensi Desain Grafis (LPBM UTI No: 0007/G.121/IIa.2.3/2024)
-
-PRESTASI & BRANDING
-- Juara 1 Animasi 2D/3D — Teknokrat Academic Expo 2025 (Piagam: 050/UTI/A-EXPO/B.12/VI/2025)
-- Juara 2 Machine Learning in Python — Teknokrat Academic Expo 2025
-- Juara 3 Augmented Reality (AR/VR) — Teknokrat Academic Expo 2025 (Piagam: 062/UTI/A-EXPO/B.11/I/2025)
-- Finalis Brand Ambassador Jaya Bakery 2023 (Top 15 Finalist)
-- Grand Finalist Muli Mekhanai Kabupaten Pesawaran 2023`;
+  const atsText = atsTextContent;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(atsText);
@@ -192,7 +130,7 @@ PRESTASI & BRANDING
                   <FileText className="w-4 h-4 text-blue-600" />
                   <span className="font-semibold text-slate-800">Dokumen Berkas Asli: CV M. Adhe Akbar (ATS)</span>
                   <span className="text-slate-400">|</span>
-                  <span className="text-[11px] font-mono text-slate-500">202 KB · Standar Seleksi MagangHub / BUMN</span>
+                  <span className="text-[11px] font-mono text-slate-500">153 KB · Standar Seleksi MagangHub / BUMN</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <a
