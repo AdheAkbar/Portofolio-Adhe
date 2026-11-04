@@ -5,6 +5,7 @@ import { SignalCanvas } from './components/SignalCanvas';
 import { RotaryDial } from './components/RotaryDial';
 import { HeroSection } from './components/HeroSection';
 import { QuickSummarySection } from './components/QuickSummarySection';
+import { ProfileSection } from './components/ProfileSection';
 import { CvOverviewSection } from './components/CvOverviewSection';
 import { EducationSection } from './components/EducationSection';
 import { HybridSkillsetSection } from './components/HybridSkillsetSection';
@@ -76,7 +77,10 @@ export const App: React.FC = () => {
         {/* MODUL 02 // RINGKASAN 10 DETIK */}
         <QuickSummarySection />
 
-        {/* MODUL 03 // EXECUTIVE CV */}
+        {/* MODUL 03 // PROFIL PRIBADI */}
+        <ProfileSection onOpenCvModal={() => setIsCvModalOpen(true)} />
+
+        {/* MODUL 04 // EXECUTIVE CV */}
         <CvOverviewSection onOpenCvModal={() => setIsCvModalOpen(true)} />
 
         {/* MODUL 04 // PENDIDIKAN */}

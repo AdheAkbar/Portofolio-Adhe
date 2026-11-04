@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Volume2, VolumeX, Sparkles, ArrowUpRight, FileText } from 'lucide-react';
-import { toggleMute, playTactileClick } from '../utils/soundEffects';
+import { ArrowUpRight, FileText } from 'lucide-react';
+import { playTactileClick } from '../utils/soundEffects';
 
 interface NavbarProps {
   activeDivision: string;
@@ -9,11 +9,11 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
-  const [muted, setMuted] = useState(false);
   const [activeId, setActiveId] = useState('hero');
 
   const NAV_ITEMS = [
     { id: 'hero', label: 'Beranda', href: '#hero' },
+    { id: 'profil', label: 'Profil', href: '#profil' },
     { id: 'hybrid-skillset', label: 'Keahlian', href: '#hybrid-skillset' },
     { id: 'cv-lengkap', label: 'CV Lengkap', href: '#cv-lengkap' },
     { id: 'github-showcase', label: 'Proyek', href: '#github-showcase' },
@@ -45,21 +45,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
     return () => window.removeEventListener('scroll', computeActive);
   }, []);
 
-  const handleMuteToggle = () => {
-    const isNowMuted = toggleMute();
-    setMuted(isNowMuted);
-    if (!isNowMuted) playTactileClick(1200);
-  };
-
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-black/[0.06] px-4 md:px-8 py-3.5 transition-all shadow-xs">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         {/* Brand Logo & Editorial Title */}
-        <div className="flex items-center gap-3">
+        <div className="flex min-w-0 items-center gap-2 sm:gap-3">
           <a 
             href="#hero" 
             onClick={() => playTactileClick(1000)}
-            className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl overflow-hidden border border-neutral-200/90 shadow-2xs hover:shadow-sm hover:scale-105 transition-all shrink-0 group"
+            className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-xl overflow-hidden border border-neutral-200/90 shadow-2xs hover:shadow-sm hover:scale-105 transition-all shrink-0 group"
             title="M. Adhe Akbar, S.Kom."
           >
             <img 
@@ -71,21 +65,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
           </a>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-heading font-extrabold text-neutral-900 tracking-tight text-base md:text-lg">
+              <span className="whitespace-nowrap font-heading font-extrabold text-neutral-900 tracking-tight text-sm sm:text-base md:text-lg">
                 M. ADHE AKBAR
               </span>
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-mono bg-neutral-100 text-neutral-700 border border-neutral-200 font-medium">
+              <span className="hidden sm:inline-flex px-2 py-0.5 rounded-full text-[10px] font-mono bg-neutral-100 text-neutral-700 border border-neutral-200 font-medium">
                 S.Kom.
               </span>
             </div>
-            <div className="text-[11px] font-sans text-neutral-500 truncate max-w-[150px] sm:max-w-xs md:max-w-none">
+            <div className="hidden text-[11px] font-sans text-neutral-500 truncate max-w-xs sm:block md:max-w-none">
               Teknisi Jaringan &amp; IT Support • Full-Stack Developer
             </div>
           </div>
         </div>
 
         {/* Quick Nav Links — active state mengikuti scroll & klik */}
-        <nav className="hidden lg:flex items-center gap-1 bg-neutral-100/90 p-1 rounded-full border border-neutral-200/80 text-xs font-sans">
+        <nav className="hidden 2xl:flex items-center gap-1 bg-neutral-100/90 p-1 rounded-full border border-neutral-200/80 text-xs font-sans">
           {NAV_ITEMS.map((item) => {
             const isActive = activeId === item.id;
             return (
@@ -112,7 +106,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
         </nav>
 
         {/* Action Controls & Contact Me Pill (Direct Behance Replica) */}
-        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+        <div className="flex items-center gap-1 sm:gap-2 shrink-0">
           {/* Dedicated CV ATS Button */}
           {onOpenCvModal && (
             <button
@@ -129,15 +123,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
               <span className="px-1 py-0.2 rounded-full bg-blue-600 text-white text-[9px] font-mono font-bold">ATS</span>
             </button>
           )}
-
-          {/* Sound Toggle */}
-          <button
-            onClick={handleMuteToggle}
-            title={muted ? "Unmute sound effects" : "Mute sound effects"}
-            className="p-1.5 sm:p-2 rounded-full bg-white border border-neutral-200 text-neutral-500 hover:text-neutral-900 hover:border-neutral-300 transition-all cursor-pointer shadow-xs shrink-0"
-          >
-            {muted ? <VolumeX className="w-4 h-4 text-rose-500" /> : <Volume2 className="w-4 h-4 text-emerald-600" />}
-          </button>
 
           {/* Contact Me CTA Solid Black Button */}
           <a

@@ -4,6 +4,7 @@ import { Compass } from 'lucide-react';
 
 const SECTIONS = [
   { id: 'hero', label: 'Beranda' },
+  { id: 'profil', label: 'Profil' },
   { id: 'cv-lengkap', label: 'Ringkasan CV' },
   { id: 'pendidikan', label: 'Pendidikan' },
   { id: 'hybrid-skillset', label: 'Daftar Keahlian & Tools' },
